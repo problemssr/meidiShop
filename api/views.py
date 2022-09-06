@@ -12,6 +12,10 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.http import HttpResponse
 
-def index(request):
 
-    return HttpResponse('ok')
+def index(request):
+    # return HttpResponse('ok')
+    context = {
+        'name': '双十一冲冲冲'
+    }
+    return render(request, 'index.html', context)
