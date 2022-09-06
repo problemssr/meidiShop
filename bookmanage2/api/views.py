@@ -59,3 +59,16 @@ def res(request):
     # return JsonResponse(data=girl_firends, safe=False)
     d = json.dumps(girl_firends)
     return HttpResponse(d)
+
+
+def setcook(request):
+    usr = request.GET.get('usrname')
+    response = HttpResponse('set_cookie')
+    response.set_cookie('name', usr)
+    return response
+
+
+def getcook(request):
+    name = request.COOKIES.get("name")
+    # print()
+    return HttpResponse('get_cookie ' + name)

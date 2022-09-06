@@ -25,5 +25,7 @@ urlpatterns = [
     path('register/', views.register),
     path('jsonw/', views.jsonw),
     path('res/', views.res),
+    path('setcook/', views.setcook),
+    path('getcook/', views.getcook),
 
 ]
