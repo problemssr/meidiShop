@@ -27,5 +27,12 @@ urlpatterns = [
     path('res/', views.res),
     path('setcook/', views.setcook),
     path('getcook/', views.getcook),
+    path('set_session/', views.set_session),
+    path('get_session/', views.get_session),
+    path('login/', views.LoginView.as_view()),
+    path('order/', views.OrderView.as_view()),
+    path('vue_test/', views.vue_test),
+    path('v_model/', views.v_model),
+    path('todo/', views.todo),
 
 ]
